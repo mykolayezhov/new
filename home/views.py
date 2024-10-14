@@ -1,5 +1,5 @@
 import flask
-from main import main
+
 def render_home():
     
     if flask.request.method == "POST":
