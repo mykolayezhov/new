@@ -14,11 +14,10 @@ main.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = flask_sqlalchemy.SQLAlchemy(main)
 migrate = flask_migrate.Migrate(app = main, db = db)
 
-main.config['MAIL_SERVER'] = 'smtp.yourmailserver.com'
+main.config['MAIL_SERVER'] = 'smtp.gmail.com'
 main.config['MAIL_PORT'] = 587
 main.config['MAIL_USE_TLS'] = True
-main.config['MAIL_USERNAME'] = 'your-email@example.com'
-main.config['MAIL_PASSWORD'] = 'rubiusmontana77'
-main.config['MAIL_DEFAULT_SENDER'] = 'mp8913969@gmail.com'
+main.config["MAIL_USE_SSL"] = False
+
 
 mail = Mail(main)
