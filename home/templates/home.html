@@ -3,17 +3,19 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-<div class = "Send recall">
-    <form method="post" class = "send_recall">    
+<div class = "recall">
+    <form method = 'POST' name = "recall">  
+        <input type="hidden" name="recall" value="true">
         <h2>Ім'я:</h2>
         <input type="text" name = "Name"> 
         <h2>Електрона пошта:</h2>
         <input type="text" name = "Email"> 
         <h2>Відгук:</h2>
-        <textarea name="Recall" name="recall_text"></textarea>
+        <textarea name="recall_text"></textarea>
        
         <button type="submit" id="send_info">Відправити Відгук</button>
         
     </form>
 </div>
+
 {% endblock %}

@@ -6,7 +6,8 @@ from .settings import main
 
 home.home_app.add_url_rule(
     rule = "/",
-    view_func = home.render_home
+    view_func = home.render_home,
+    methods=['GET', 'POST']
 )
 
 tour.tour_app.add_url_rule(

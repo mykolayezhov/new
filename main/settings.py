@@ -18,7 +18,7 @@ main.config['MAIL_SERVER'] = 'smtp.yourmailserver.com'
 main.config['MAIL_PORT'] = 587
 main.config['MAIL_USE_TLS'] = True
 main.config['MAIL_USERNAME'] = 'your-email@example.com'
-main.config['MAIL_PASSWORD'] = '12345678900tBig'
-main.config['MAIL_DEFAULT_SENDER'] = 'travel.agency1462@gmail.com'
+main.config['MAIL_PASSWORD'] = 'rubiusmontana77'
+main.config['MAIL_DEFAULT_SENDER'] = 'mp8913969@gmail.com'
 
 mail = Mail(main)
