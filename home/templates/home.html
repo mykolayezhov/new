@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock style %}
+
 {% block title %} Home {% endblock %}
+
+
 
 {% block content %}
 <div class = "recall">
     <form method = 'POST' name = "recall">  
         <input type="hidden" name="recall" value="true">
-        <h2>Ім'я:</h2>
+        <h2>Ваше ім'я:</h2>
         <input type="text" name = "Name"> 
-        <h2>Електрона пошта:</h2>
+        <h2>Ваша електрона пошта:</h2>
         <input type="text" name = "Email"> 
-        <h2>Відгук:</h2>
+        <h2>Ваш відгук:</h2>
         <textarea name="recall_text"></textarea>
        
         <button type="submit" id="send_info">Відправити Відгук</button>

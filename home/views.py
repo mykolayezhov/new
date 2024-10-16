@@ -10,12 +10,21 @@ def render_home():
             email = flask.request.form.get("Email")
             recall_text = flask.request.form.get("recall_text")
 
-            msg = Message(
-                        subject= "Your order!",
-                        recipients= 'mp8913969@gmail.com',
-                        body = f'Клієнт {name} залишив/ла відгук:/n {recall_text}/n.Пошта для зворотнього звʼязку з клієнтом {email}.',
-                        sender = [email]
-                    )
-           
-            mail.send_message()
+
+            try:
+                msg = Message(
+                            subject= "Your order!",
+                            recipients = ["mykolayezhov@gmail.com"],
+                            body = f'Клієнт {name} залишив/ла відгук: {recall_text}. Пошта для зворотнього звʼязку з клієнтом {email}.',
+                            sender = email
+                        )
+                print(msg.recipients)
+                mail.send(msg)
+
+
+            except Exception as e:
+                print(f"mail-send-error: {e}")
+
+
+                
     return flask.render_template("home.html")
