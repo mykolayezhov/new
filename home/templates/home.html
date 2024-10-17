@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 
-{% block style %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-{% endblock style %}
 
-{% block title %} Home {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'home.css') }}">
+    <script  src = "{{ url_for('static', filename = 'script.js') }}" defer></script>
+{% endblock %}
+
+
+{% block title %} 
+    Home 
+{% endblock %}
 
 
 
@@ -18,10 +23,12 @@
         <input type="text" name = "Email"> 
         <h2>Ваш відгук:</h2>
         <textarea name="recall_text"></textarea>
-       
-        <button type="submit" id="send_info">Відправити Відгук</button>
+        <input type="hidden" name="recall" value="true">
+        <button type="submit" id="send_info" class="btn1">Відправити Відгук</button>
         
     </form>
 </div>
 
 {% endblock %}
+
+

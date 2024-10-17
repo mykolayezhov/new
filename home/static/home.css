@@ -1,5 +1,8 @@
-button{
+.btn1{
     height: 100px;
     width: 500px;
     color: limegreen;
+}
+body{
+    background-color: tomato;
 }
