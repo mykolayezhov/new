@@ -1,18 +1,18 @@
 {% extends "base.html" %} 
 
 {% block title %}
-registration
+login
 {% endblock %}
 {% block content %}
 <h1>
-    Сторінка registration
+    login
 </h1>
 
 <form method = "post" id = "auth_content">
-  <p>Придумайте ваш логін</p>
+  <p>Ваш логін</p>
   <input type="text" name = "Login">
-  <p>Придумайте пароль</p>
+  <p>Ваш пароль</p>
   <input type="password" name = "Password">
-  <button>Зареєструватися</button>
+  <button>Авторизуватися</button>
 </form>
 {% endblock %}
