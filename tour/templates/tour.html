@@ -1,12 +1,23 @@
 {% extends "base.html" %} 
 
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('tour_app.static', filename = 'tour.css') }}">
+    <!-- <script  src = "{{ url_for('home_app.static', filename = 'script.js') }}" defer></script> -->
+{% endblock %}
+
+
 {% block title %}
-    tour
+    Tours
 {% endblock %}
 
 
 {% block content %}
-<h1>
-    сторінка конкретного напрямку відпочинку
-</h1>
+
+<div class="tour_mid">
+    <a href="/tour1/">{{ voucher.title }}</a>
+    <h1>{{ voucher.date }}</h1>
+    <h1>{{ voucher.country }}</h1>
+</div>
+
+
 {% endblock %}

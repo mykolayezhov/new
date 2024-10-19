@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('tour_app.static', filename = 'tour1.css') }}">
+    <!-- <script  src = "{{ url_for('home_app.static', filename = 'script.js') }}" defer></script> -->
+{% endblock %}
+
+
+{% block title %}
+    Tour info
+{% endblock %}
+
+
+{% block content %}
+<div class="text">
+    <h1>{{ voucher.description }}</h1>
+</div>
+{% endblock %}

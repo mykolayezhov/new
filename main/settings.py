@@ -12,11 +12,13 @@ MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
 
 main = flask.Flask(
     import_name = 'main',
-    template_folder= 'templates'
+    template_folder= 'templates',
+    static_folder="static",
+    static_url_path="/main/"
 )
 
 
-main.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+main.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = flask_sqlalchemy.SQLAlchemy(main)
 migrate = flask_migrate.Migrate(app = main, db = db)
 

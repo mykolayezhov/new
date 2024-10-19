@@ -1,18 +1,22 @@
 {% extends "base.html" %} 
 
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('user.static', filename = 'user.css') }}">
+{% endblock %}
+
 {% block title %}
-registration
+Registration
 {% endblock %}
 {% block content %}
-<h1>
-    Сторінка registration
-</h1>
 
-<form method = "post" id = "auth_content">
-  <p>Придумайте ваш логін</p>
-  <input type="text" name = "Login">
-  <p>Придумайте пароль</p>
-  <input type="password" name = "Password">
-  <button>Зареєструватися</button>
-</form>
+<div class = "registration">
+  <form method = "post" id = "auth_content" class = "reg">
+    <h2>Придумайте ваш логін:</h2>
+    <input type="text" name = "Login">
+    <h2>Придумайте пароль:</h2>
+    <input type="password" name = "Password">
+    <button class = "btn1">Зареєструватися</button>
+  </form>
+</div>
 {% endblock %}

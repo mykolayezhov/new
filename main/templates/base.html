@@ -1,16 +1,19 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}  {% endblock %}</title>  
-        {% block style %}
-        {% endblock style %}
-    </head>
-    <body>
-        <a href="/">home page</a>
-        <a href="/user/">user page</a>
-        <a href="/tour/">tour</a>
-        {% block content %}
-        {% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}  {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='iconsite.png') }}">
+    {% block style %}                
+    {% endblock %}
+</head>
+<body>
+    <a href="/">HOME</a>
+    <a href="/user/">REGISTRATION</a>
+    <a href="/auth/">AUTHORIZATION</a>
+    <a href="/tour/">TOUR</a>
+    {% block content %}
+    {% endblock %}
+</body>
 </html>

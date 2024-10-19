@@ -1,18 +1,21 @@
 {% extends "base.html" %} 
 
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('user.static', filename = 'auth.css') }}">
+{% endblock %}
+
 {% block title %}
-login
+Log in
 {% endblock %}
 {% block content %}
-<h1>
-    login
-</h1>
 
-<form method = "post" id = "auth_content">
-  <p>Ваш логін</p>
-  <input type="text" name = "Login">
-  <p>Ваш пароль</p>
-  <input type="password" name = "Password">
-  <button>Авторизуватися</button>
-</form>
+<div class="login">
+  <form method = "post" id = "auth_content" class="auth">
+    <h2>Ваш логін</h2>
+    <input type="text" name = "Login">
+    <h2>Ваш пароль</h2>
+    <input type="password" name = "Password">
+    <button class="btn1">Авторизуватися</button>
+  </form>
+</div>
 {% endblock %}

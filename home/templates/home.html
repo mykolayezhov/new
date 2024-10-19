@@ -14,8 +14,9 @@
 
 
 {% block content %}
+
 <div class = "recall">
-    <form method = 'POST' name = "recall">  
+    <form method = 'POST' name = "recall" class="form_recall">  
         <input type="hidden" name="recall" value="true">
         <h2>Ваше ім'я:</h2>
         <input type="text" name = "Name"> 
@@ -24,7 +25,7 @@
         <h2>Ваш відгук:</h2>
         <textarea name="recall_text"></textarea>
         <input type="hidden" name="recall" value="true">
-        <button type="submit" id="send_info" class="btn1">Відправити Відгук</button>
+        <button type="submit" id="send_info" class="btn1"  onclick="showAlert()">Відправити Відгук</button>
         
     </form>
 </div>

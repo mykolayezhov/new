@@ -18,7 +18,7 @@ def render_home():
                             body = f'Клієнт {name} залишив/ла відгук: {recall_text}. Пошта для зворотнього звʼязку з клієнтом {email}.',
                             sender = email
                         )
-                print(msg.recipients)
+                # print(msg.recipients)
                 mail.send(msg)
 
 
